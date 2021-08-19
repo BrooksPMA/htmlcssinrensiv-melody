@@ -4,7 +4,6 @@ $(document).ready(function () {
   var counterUp = $(".counter-up");
   var counterDown = $(".counter-down");
   floorPath.on("mouseover", function () {
-    floorPath.removeClass("current-floor");
     currentFloor = $(this).attr("data-floor");
     $(".counter").text(currentFloor);
   });
