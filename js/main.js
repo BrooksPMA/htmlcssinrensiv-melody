@@ -10,7 +10,7 @@ $(document).ready(function () {
   var flatsLink = $(".flat-link");
 
   floorPath.on("mouseover", function () {
-    floorPath.removeClass("current-floor");
+    deleteClass();
     currentFloor = $(this).attr("data-floor");
     $(".counter").text(currentFloor);
   });
@@ -39,7 +39,7 @@ $(document).ready(function () {
       useGrouping: false,
     });
     $(".counter").text(usCurrentFloor);
-    floorPath.removeClass("current-floor");
+    deleteClass();
     $(`[data-floor=${usCurrentFloor}]`).toggleClass("current-floor");
   };
 
